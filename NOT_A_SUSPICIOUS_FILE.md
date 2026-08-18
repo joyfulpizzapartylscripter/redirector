@@ -1,1 +1,1 @@
-https://discord.com/channels/@me
+https://www.youtube.com/watch?v=Aq5WXmQQooo
