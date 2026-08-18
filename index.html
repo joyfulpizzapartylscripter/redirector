@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>you are going to wherever...</title>
+</head>
+<body>
+    <p>SOON.</p>
+
+    <script>
+        // URL_ENTER.txt 파일에서 주소를 읽어옵니다.
+        fetch('URL_ENTER.txt')
+            .then(response => response.text())
+            .then(url => {
+                // 공백이나 줄바꿈을 없앱니다.
+                const targetUrl = url.trim();
+                
+                // 주소가 비어있지 않다면 그 주소로 이동합니다.
+                if (targetUrl) {
+                    window.location.href = targetUrl;
+                } else {
+                    document.body.innerHTML = "<p>url empty or failed lol.</p>";
+                }
+            })
+            .catch(error => {
+                console.error('오류 발생:', error);
+                document.body.innerHTML = "<p>lucky ahh bug.</p>";
+            });
+    </script>
+</body>
+</html>
